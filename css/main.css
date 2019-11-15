@@ -88,7 +88,8 @@ header nav ul li {
 }
 header nav ul li a{
 	text-decoration: none;
-	color:#77a466;
+    color:#77a466;
+}
 }
 
 .about,
@@ -202,12 +203,6 @@ footer span {
     h4 {
         font-size: .5em;
     }
-    
-    p {
-        font-size: .875em;
-        line-height: 21px;
-        padding: 0 30px;
-    }
 }
 @media screen and (min-width: 1200px){
     #container {
@@ -226,11 +221,6 @@ footer span {
         font-size: .75em;
     }
     
-    p {
-        font-size: .875em;
-        line-height: 21px;
-        padding: 0 30px;
-    }
     header {
         width: 100%;
     }
@@ -255,7 +245,7 @@ footer span {
     .section-one,
     .section-two,
     .section-three {
-        height: 300px;
+        height: 400px;
     }
     footer {
         width: 100%;
