@@ -9,11 +9,11 @@ html {
 
 body {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif; /* default typeface*/
+    width: 100%;
     /*makes the body a flex box*/
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .container{
@@ -35,16 +35,16 @@ h4 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 1.2em;
+	font-size: 2em;
 }
 h2 {
-	font-size: 1em;
+	font-size: 1.5em;
 }
 h3 {
 	font-size: 1em;
 }
 h4 {
-	font-size: .em;
+	font-size: .875em;
 }
 
 p {
@@ -64,8 +64,11 @@ header {
 }
 
 header h1 {
-	margin: 0;
-    padding: 38px 0;
+    width: 100%;
+	margin: 20px 0;
+    padding: 20px 0;
+    border-bottom: 3px #77a466 solid;
+    text-align: center;
 
 }
 header h1 span {
@@ -73,24 +76,26 @@ header h1 span {
 }
 
 header nav {
-    padding: 46px 0;
+    padding: 0 0 30px 0;
 }
 header nav ul {
-	margin: 0;
+	margin: 0 ;
 	padding: 0;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-    padding: 0 10px;
     display: inherit;
-    justify-content: center;
-    align-items: center; 
 }
 header nav ul li a{
 	text-decoration: none;
-    color:#77a466;  
+    color:#77a466;
+    line-height: 50px;
+    
+}
+nav {
+    text-align: center;
 }
 }
 
@@ -183,7 +188,7 @@ footer span {
     }
     /*edits the size of the fonts*/
     h1 {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
     h2 {
         font-size: 1.2em;
@@ -199,6 +204,7 @@ footer span {
     }
     /*makes the log and nav stack on top of one another*/
     header nav ul li {
+        font-size: 1em;
         display: inherit;
         justify-content: center;
         align-items: center;
@@ -252,6 +258,12 @@ footer span {
     header {
         flex-direction: row;
     }
+    header h1 {
+        width: auto;
+        border-bottom: none;
+        text-align: left;
+    
+    }
     header nav {
         float: right;
         padding: 46px 0;
@@ -267,6 +279,9 @@ footer span {
     header nav ul li a{
         text-decoration: none;
         color:#77a466;  
+    }
+    nav {
+        text-align: right;
     }
     /*changes width these containers*/
     .about,
