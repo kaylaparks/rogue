@@ -8,8 +8,9 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    display: flex;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif; /* default typeface*/
+    /*makes the body a flex box*/
+    display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -18,10 +19,11 @@ body {
 .container{
 	width: 75%;
     margin: 0 auto;
+    /*makes the container a flex box*/
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /*allows items in container to stack*/
 }
 
 h1,
@@ -42,13 +44,12 @@ h3 {
 	font-size: 1em;
 }
 h4 {
-	font-size: .5em;
+	font-size: .em;
 }
 
 p {
 	font-size: .875em;
-	line-height: 21px;
-    padding: 0 30px;
+	line-height: 21px;  
 }
 
 header {
@@ -56,15 +57,16 @@ header {
     width: 100%;
 	border-bottom: 3px solid #77a466;
     margin: 0 auto;
+    /*makes the header a flex box*/
     display: flex;
-    justify-content: center;
+    flex-direction: column; /*stacks logo and nav*/
     align-items: center;
 }
 
 header h1 {
 	margin: 0;
     padding: 38px 0;
-    align-content: flex-start;
+
 }
 header h1 span {
 	color: #77a466;
@@ -82,11 +84,13 @@ header nav ul li {
 	font-weight: 700;
 	font-size: .875em;
     padding: 0 10px;
-    display: inline;
+    display: inherit;
+    justify-content: center;
+    align-items: center; 
 }
 header nav ul li a{
 	text-decoration: none;
-    color:#77a466;
+    color:#77a466;  
 }
 }
 
@@ -95,10 +99,10 @@ header nav ul li a{
 	margin: 0 auto;
     clear: both;
     width: 50%;
+    /*makes the about/features a flex box*/
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
 }
 
 .main-image {
@@ -134,15 +138,6 @@ header nav ul li a{
     
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
-}
-
 .menu {
 	list-style: none;
 	padding: 0;
@@ -169,6 +164,7 @@ footer {
 	margin: 0 auto;
 	clear: both;
     text-align: center;
+    /*makes the footer a flex box*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +181,7 @@ footer span {
     #container {
         width: 100%;
     }
+    /*edits the size of the fonts*/
     h1 {
         font-size: 1.5em;
     }
@@ -195,35 +192,37 @@ footer span {
         font-size: 1em;
     }
     h4 {
-        font-size: .5em;
+        font-size: .75em;
     }
-    header {
-        width: 100%;
-        justify-content: left;
+    p {
+        padding: 0 30px;
     }
+    /*makes the log and nav stack on top of one another*/
     header nav ul li {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: .7em;
-        padding: 0 10px;
-        display: inline;
-        flex-flow: row wrap;
+        display: inherit;
+        justify-content: center;
+        align-items: center;
     }
+    /*makes the features section float along side each other instead of stack like in mobile model*/
     .section-one,
     .section-two,
     .section-three {
         height: auto;
         width: 33%;
         float: left;
-        flex-flow: row wrap;
     }
+    /*gives feature sections borders and padding that the mobil version doesnt need*/
     .section-two {
         border-left: 1px solid #eee;
         border-right: 1px solid #eee;
     }
+    .section-one h4 {
+        padding: 10px 0;
+    }
+    
     .section-two h4,
     .section-three h4 {
-	padding: 10px 30px;
+        padding: 10px 30px;
     }
     footer {
         width: 100%;
@@ -233,6 +232,7 @@ footer span {
     #container {
         width: 100%;
     }
+    /*changes font sizes for desktop*/
     h1 {
         font-size: 1.8em;
     }
@@ -245,26 +245,30 @@ footer span {
     h4 {
         font-size: .75em;
     }
-    
+    P{
+        padding: 0 30px;
+    }
+    /*allows the logo and nav to be along side one another instead of stacked*/
     header {
-        width: 100%;
-        justify-content: left;
+        flex-direction: row;
     }
     header nav {
         float: right;
         padding: 46px 0;
     }
+    /*allows the nav words to be in a row instead of stacked next to logo*/
     header nav ul li {
         text-transform: uppercase;
         font-weight: 700;
         font-size: .875em;
         padding: 0 10px;
-        display: inline;
+        display: inline; 
     }
     header nav ul li a{
         text-decoration: none;
-        color:#77a466;
+        color:#77a466;  
     }
+    /*changes width these containers*/
     .about,
     .features {
         width: 100%;
@@ -274,22 +278,28 @@ footer span {
         float: left;
         width: 100%
     }
+    /*feature section now lines up next to one another instead of stacked like mobil*/
     .section-one,
     .section-two,
     .section-three {
         height: auto;
         width: 33%;
         float: left;
-        flex-flow: row wrap;
     }
+    /*adds boarders and padding that the mobil version doesn't need*/
     .section-two {
         border-left: 1px solid #eee;
         border-right: 1px solid #eee;
     }
+    .section-one h4 {
+        padding: 10px 0;
+    }
+    
     .section-two h4,
     .section-three h4 {
-	padding: 10px 30px;
+        padding: 10px 30px;
     }
+    /*changes width of footer*/
     footer {
         width: 100%;
     }
