@@ -282,6 +282,7 @@ footer span {
     }
     nav {
         text-align: right;
+        flex-grow: 1;
     }
     /*changes width these containers*/
     .about,
