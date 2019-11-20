@@ -102,7 +102,6 @@ nav {
 .about,
 .features {
 	margin: 0 auto;
-    clear: both;
     width: 50%;
     /*makes the about/features a flex box*/
     display: flex;
@@ -112,7 +111,6 @@ nav {
 
 .main-image {
 	height: auto;
-    float: left;
 }
 .main-image img {
     border-bottom: 3px solid #77a466;
@@ -121,7 +119,6 @@ nav {
 
 .main-title {
 	height: auto;
-	float: left;
 }
 .main-title h3 {
 	text-align: left;
@@ -167,7 +164,6 @@ footer {
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
     text-align: center;
     /*makes the footer a flex box*/
     display: flex;
@@ -209,13 +205,32 @@ footer span {
         justify-content: center;
         align-items: center;
     }
+    .main-image {
+        height: auto;
+        width: 100%;
+        display: flex;
+    }
+    .about,
+    .features{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .features{
+        align-items: baseline;
+        flex-direction: row;
+        flex-flow: row wrap;
+    }
     /*makes the features section float along side each other instead of stack like in mobile model*/
     .section-one,
     .section-two,
     .section-three {
         height: auto;
         width: 33%;
-        float: left;
     }
     /*gives feature sections borders and padding that the mobil version doesnt need*/
     .section-two {
@@ -285,14 +300,25 @@ footer span {
         flex-grow: 1;
     }
     /*changes width these containers*/
-    .about,
-    .features {
-        width: 100%;
-    }
     .main-image {
         height: auto;
-        float: left;
-        width: 100%
+        width: 100%;
+        display: flex;
+    }
+    .about,
+    .features{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .features{
+        align-items: baseline;
+        flex-direction: row;
+        flex-flow: row wrap;
+    }
+    .about{
+        flex-direction: column;
     }
     /*feature section now lines up next to one another instead of stacked like mobil*/
     .section-one,
@@ -300,7 +326,6 @@ footer span {
     .section-three {
         height: auto;
         width: 33%;
-        float: left;
     }
     /*adds boarders and padding that the mobil version doesn't need*/
     .section-two {
